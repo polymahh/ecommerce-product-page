@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+:root{
+  --Orange : hsl(26, 100%, 55%);
+  --orange-hover :hsl(26, 100%, 67%);
+  --pale-Orange : hsl(25, 100%, 94%);
+  --Very-vark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Black-75 : hsla(0, 0%, 0%, 0.75);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 16px;
 }
 
 a {
@@ -15,6 +31,175 @@ a {
   box-sizing: border-box;
 }
 
+
+.imageProduct{
+  position: relative;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.preview{
+  display: none;
+}
+.prev , .next{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  background-color: var(--White);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next{
+  right: 0px;
+}
+
+.details{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.details>h2{
+  font-size: 1.8rem;
+  margin: 5px 0px;
+}
+
+.details>span{
+  color: var(--Orange);
+  font-size: small;
+  font-weight: bold;
+}
+
+.details>p{
+  color:var(--Dark-grayish-blue);
+  line-height: 1.7rem
+ 
+}
+/* price stuff */
+.price{
+  display: flex;
+  justify-content: space-between;
+}
+.discount{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.discount>div{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.discount>small{
+  padding: 3px 10px;
+  background-color: var(--pale-Orange);
+  color: var(--Orange);
+  font-weight: bold;
+  border-radius: 6px;
+
+
+}
+.price>span{
+  color: var(--Grayish-blue);
+  text-decoration-line: line-through;
+}
+/* end of price stuff */
+/* add to cart */
+.quantity{
+  margin: 15px 0px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background-color: var(--Light-grayish-blue);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-grow: 1;
+
+}
+
+.quantity>div:hover{
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.button{
+ background-color: var(--Orange);
+ color: var(--White);
+ border: none;
+ border-radius: 12px;
+ padding: 15px 0px;
+ font-weight: bold;
+ flex-grow: 2;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 15px;
+ box-shadow: 0px 20px 20px var(--pale-Orange);
+}
+.button:hover{
+  cursor: pointer;
+  background-color: var(--orange-hover);
+}
+@media (min-width:768px){
+
+  .product{
+    padding: 20px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .pimg{
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+  }
+  .preview{
+    display: flex;
+    gap: 15px;
+   
+  }
+
+  .preview>div{
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+  }
+  .preview>div:hover{
+    cursor: pointer;
+    opacity: 70%;
+  }
+
+  .addToCart{
+    display: flex;
+    gap: 10px;
+    
+  }
+
+  .price{
+    display: block;
+  
+  }
+  .button{
+    margin: 15px 0px;
+  }
+
+
+
+  
+ 
+}
+
+/* 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -23,4 +208,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */

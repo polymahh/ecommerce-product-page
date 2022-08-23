@@ -1,0 +1,20 @@
+.pimg{
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+  }
+  .preview{
+    display: flex;
+    gap: 15px;
+   
+  }
+
+  .preview>div{
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+  }
+  .preview>div:hover{
+    cursor: pointer;
+    opacity: 70%;
+  }

@@ -12,6 +12,7 @@
   --White: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 0%);
   --Black-75 : hsla(0, 0%, 0%, 0.75);
+  --Black-25 : hsla(0, 0%, 0%, 0.25);
 }
 
 html,
@@ -153,7 +154,9 @@ a {
 @media (min-width:768px){
 
   .product{
+    position: relative;
     padding: 20px;
+    padding-top: 80px;
     display: grid;
     gap: 40px;
     grid-template-columns: 1fr 1fr;
@@ -193,7 +196,27 @@ a {
     margin: 15px 0px;
   }
 
+  .prev,.next{
+    display: none;
+  }
 
+  .active{
+    border: 3px solid var(--Orange);
+  }
+  
+  .active img{
+    opacity: 50%;
+  }
+
+  .productPreview{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    top:0px;
+    left: 0px;
+    z-index: 101;
+  }
 
   
  

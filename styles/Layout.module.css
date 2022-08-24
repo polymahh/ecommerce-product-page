@@ -38,6 +38,21 @@
   display: flex;
   border-radius: 50%;
 }
+.cart{
+  position: relative;
+}
+.cart>div{
+  background-color: var(--Orange);
+  position: absolute;
+  color: var(--White);
+  top:-3px;
+  right:-3px;
+  z-index: 199;
+  padding: 0px 5px;
+  font-size: 0.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
 .cart:hover{
   cursor: pointer;
@@ -203,8 +218,10 @@ height: 100vh;
 .item{
   flex-wrap: wrap;
 }
-
-
+.cart>div{
+  top:5px;
+  right:-3px;
+}
 }
 
 

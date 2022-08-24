@@ -1,4 +1,4 @@
-import del from '../public/images/icon-delete.svg'
+import del from '../public/icon-delete.svg'
 import { useContext, useEffect } from 'react'
 import CartContext from '../CArtContext'
 import cartStyles from '../styles/Layout.module.css'

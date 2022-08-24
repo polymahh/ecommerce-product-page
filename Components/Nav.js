@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '../public/images/logo.svg'
-import cart from '../public/images/icon-cart.svg'
-import avatar from '../public/images/image-avatar.png'
-import menu from '../public/images/icon-menu.svg'
-import close from '../public/images/icon-close.svg'
+import logo from '../public/logo.svg'
+import cart from '../public/icon-cart.svg'
+import avatar from '../public/image-avatar.png'
+import menu from '../public/icon-menu.svg'
+import close from '../public/icon-close.svg'
 import navStyles from "../styles/Layout.module.css"
 import { useContext, useState } from 'react'
 import Cart from './Cart'
@@ -32,8 +32,7 @@ function Nav() {
   }
 
 
-  const hiddenCart = {display:'none'}
-  const visibleCart ={}
+  const cartNote =  cartArr[0] ? 'block' : 'none'
 
   return (
     <div className={navStyles.nav}>
@@ -63,6 +62,7 @@ function Nav() {
         </ul>
 
         <div className={navStyles.cart} onClick={CartHandler}>
+        <div style={{display:cartNote}}>{cartArr[0] ? cartArr[0].quantity : 0}</div>
         <Image src={cart} alt="cart" height="20px" width="20px"/>
         </div>
         <div className={navStyles.avatar}>

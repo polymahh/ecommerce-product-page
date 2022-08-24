@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import prev from '../public/images/icon-previous.svg'
-import next from '../public/images/icon-next.svg'
-import plus from '../public/images/icon-plus.svg'
-import minus from '../public/images/icon-minus.svg'
-import cart from '../public/images/icon-cart-w.svg'
+import prev from '../public/icon-previous.svg'
+import next from '../public/icon-next.svg'
+import plus from '../public/icon-plus.svg'
+import minus from '../public/icon-minus.svg'
+import cart from '../public/icon-cart-w.svg'
 import { useContext, useEffect, useRef, useState } from 'react'
-import close from '../public/images/icon-close.svg'
+import close from '../public/icon-close.svg'
 import CartContext from '../CArtContext'
 
 
@@ -15,10 +15,10 @@ export default function Home() {
 
   const product = {
     imgs : [
-      '/../public/images/image-product-1.jpg',
-      '/../public/images/image-product-2.jpg',
-      '/../public/images/image-product-3.jpg',
-      '/../public/images/image-product-4.jpg'
+      '/../public/image-product-1.jpg',
+      '/../public/image-product-2.jpg',
+      '/../public/image-product-3.jpg',
+      '/../public/image-product-4.jpg'
     ],
     title:'Fall Limited Edition Sneakers',
     price:'125.00',

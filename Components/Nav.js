@@ -6,8 +6,9 @@ import avatar from '../public/images/image-avatar.png'
 import menu from '../public/images/icon-menu.svg'
 import close from '../public/images/icon-close.svg'
 import navStyles from "../styles/Layout.module.css"
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Cart from './Cart'
+import CartContext from '../CArtContext'
 
 function Nav() {
 
@@ -16,6 +17,8 @@ function Nav() {
 
   const menuHandler = ()=> setShowMenu(!showMenu)
   const CartHandler = ()=> setShowCart(!showCart)
+
+  const {cartArr , setCartArr} = useContext(CartContext)
   
   let hiddenMenu = {display:'none'}
   let visibleMenu = {

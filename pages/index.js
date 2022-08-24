@@ -15,10 +15,10 @@ export default function Home() {
 
   const product = {
     imgs : [
-      '/../public/image-product-1.jpg',
-      '/../public/image-product-2.jpg',
-      '/../public/image-product-3.jpg',
-      '/../public/image-product-4.jpg'
+      '/image-product-1.jpg',
+      '/image-product-2.jpg',
+      '/image-product-3.jpg',
+      '/image-product-4.jpg'
     ],
     title:'Fall Limited Edition Sneakers',
     price:'125.00',

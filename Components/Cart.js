@@ -28,14 +28,14 @@ function Cart() {
                   cartArr.map((item,index) => (
                     <div className={cartStyles.item} key={index}>
                       <div className={cartStyles.img}>
-                        <Image src={item.imgs[0]} alt='p' width="1000px" height="1000px" loading="lazy"/>
+                        <Image src={item.imgs[0]} alt='p' width="1000px" height="1000px"/>
                       </div>
                       <div className={cartStyles.info}>
                         <span>{item.title}</span>
                         <small>${item.price} X {item.quantity} <span className={cartStyles.sum}>${parseInt(item.price)*item.quantity}</span></small>
                       </div>
                       <div className={cartStyles.del} onClick={()=> deleteItem(index)}>
-                        <Image src={del} alt="del" loading="lazy"/>
+                        <Image src={del} alt="del"/>
                       </div>
                       <button className={cartStyles.btn} >Checkout</button>
                     </div>

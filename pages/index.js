@@ -107,28 +107,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>E-commerce product page</title>
       </Head>
-      <main>
+      
       <div className='productPreview' style={showImage ? showTrue : showFalse}>
         
         <div className='big-image'>
         <div className='close' onClick={showToggle}>
-        <Image src={close} alt="close" loading="lazy" />
+        <Image src={close} alt="close" />
         </div>
             <div className='big-img'>
-            <Image src={previewImage} alt="p1" width="1000px" height="1000px" loading="lazy"/>
+            <Image src={previewImage} alt="p1" width="1000px" height="1000px"/>
             </div>
 
           <div className='big-prev' onClick={prevImage}>
-          <Image src={prev} alt="prev" loading="lazy"/>
+          <Image src={prev} alt="prev"/>
           </div>
           <div className='big-next' onClick={nextImage} >
-          <Image src={next} alt="next" loading="lazy"/>
+          <Image src={next} alt="next"/>
           </div>
 
           <div className="big-preview" ref={bigPreview}>
             {imgs.map((item,index)=>(
               <div  key={index} onClick={()=> handleImage(index)}>
-                <Image src={item} alt={index} width="1000px" height="1000px" loading="lazy" />
+                <Image src={item} alt={index} width="1000px" height="1000px" />
               </div>
             ))}
           </div>
@@ -197,7 +197,7 @@ export default function Home() {
 
 
       </div>
-    </main>
+    
     </div>
   )
 }

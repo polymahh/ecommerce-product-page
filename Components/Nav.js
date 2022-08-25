@@ -35,12 +35,13 @@ function Nav() {
   const cartNote =  cartArr[0] ? 'block' : 'none'
 
   return (
+    <nav>
     <div className={navStyles.nav}>
         <div className={navStyles.menu} onClick={menuHandler}>
-        <Image src={menu} alt="menu" />
+        <Image src={menu} alt="menu" loading="eager"/>
         </div>
         <div className={navStyles.logo}>
-        <Image src={logo} alt="logo"/>
+        <Image src={logo} alt="logo" loading="eager"/>
         </div>
         
         <ul className={navStyles.links}>
@@ -63,16 +64,16 @@ function Nav() {
 
         <div className={navStyles.cart} onClick={CartHandler}>
         <div style={{display:cartNote}}>{cartArr[0] ? cartArr[0].quantity : 0}</div>
-        <Image src={cart} alt="cart" height="20px" width="20px"/>
+        <Image src={cart} alt="cart" height="20px" width="20px" loading="eager"/>
         </div>
         <div className={navStyles.avatar}>
-        <Image src={avatar} alt="avatar"  height="30px" width="30px"/>
+        <Image src={avatar} alt="avatar"  height="30px" width="30px" loading="eager"/>
         </div>
         {/* mobile menu */}
         <div style={showMenu ? visibleMenu : hiddenMenu}>
             <div className={navStyles.menuCard}>
               <div >
-                <Image src={close} alt="close" onClick={menuHandler}/>
+                <Image src={close} alt="close" onClick={menuHandler} loading="eager"/>
               </div>
               <ul className={navStyles.menuLinks}>
                   <li>
@@ -99,6 +100,7 @@ function Nav() {
           <Cart />
         </div>
     </div>
+    </nav>
   )
 }
 export default Nav

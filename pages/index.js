@@ -105,29 +105,30 @@ export default function Home() {
       <Head>
         <meta name='keywords' content='ecommerce,best shop,product page'/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+        <title>E-commerce product page</title>
       </Head>
+      <main>
       <div className='productPreview' style={showImage ? showTrue : showFalse}>
         
         <div className='big-image'>
         <div className='close' onClick={showToggle}>
-        <Image src={close} alt="close" />
+        <Image src={close} alt="close" loading="lazy" />
         </div>
             <div className='big-img'>
-            <Image src={previewImage} alt="p1" width="1000px" height="1000px" />
+            <Image src={previewImage} alt="p1" width="1000px" height="1000px" loading="lazy"/>
             </div>
 
           <div className='big-prev' onClick={prevImage}>
-          <Image src={prev} alt="prev" />
+          <Image src={prev} alt="prev" loading="lazy"/>
           </div>
           <div className='big-next' onClick={nextImage} >
-          <Image src={next} alt="next" />
+          <Image src={next} alt="next" loading="lazy"/>
           </div>
 
           <div className="big-preview" ref={bigPreview}>
             {imgs.map((item,index)=>(
               <div  key={index} onClick={()=> handleImage(index)}>
-                <Image src={item} alt={index} width="1000px" height="1000px" />
+                <Image src={item} alt={index} width="1000px" height="1000px" loading="lazy" />
               </div>
             ))}
           </div>
@@ -137,20 +138,20 @@ export default function Home() {
       <div className='product'>
         <div className='imageProduct'>
           <div className='pimg' onClick={showToggle}>
-          <Image src={previewImage} alt="p1" width="1000px" height="1000px" />
+          <Image src={previewImage} alt="p1" width="1000px" height="1000px" loading="eager" />
           </div>
 
           <div className='prev' onClick={prevImage}>
-          <Image src={prev} alt="prev" />
+          <Image src={prev} alt="prev" loading="eager"/>
           </div>
           <div className='next' onClick={nextImage} >
-          <Image src={next} alt="next" />
+          <Image src={next} alt="next" loading="eager"/>
           </div>
 
           <div className="preview" ref={preview}>
             {imgs.map((item,index)=>(
               <div  key={index} onClick={()=> handleImage(index)}>
-                <Image src={item} alt={index} width="1000px" height="1000px" />
+                <Image src={item} alt={index} width="1000px" height="1000px" loading="eager"/>
               </div>
             ))}
           </div>
@@ -158,7 +159,7 @@ export default function Home() {
         </div>
         <div className='details'>
             <span>SNEAKER COMPANY</span>
-            <h2>{title}</h2>
+            <h1>{title}</h1>
             <p>
               These low-profile sneakers are your perfect casual wear companion.
               Featuring a durable rubber outer sole, they`&apos;`ll withstand everything the weather can offer.
@@ -176,16 +177,16 @@ export default function Home() {
         <div className='addToCart'>
           <div className='quantity'>
             <div id='minus' onClick={quantityAdd}>
-            <Image src={minus} alt="minus" />
+            <Image src={minus} alt="minus" loading="eager"/>
             </div>
             <span>{qNum}</span>
             <div id='plus' onClick={quantityAdd}>
-            <Image src={plus} alt="plus"/>
+            <Image src={plus} alt="plus" loading="eager"/>
             </div>
 
           </div>
           <div  className='button' onClick={addToCart}>
-            <Image src={cart} alt="next" />
+            <Image src={cart} alt="next" loading="eager"/>
               Add to cart
           </div >
 
@@ -196,6 +197,7 @@ export default function Home() {
 
 
       </div>
+    </main>
     </div>
   )
 }

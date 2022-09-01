@@ -137,8 +137,10 @@ export default function Home() {
       </div>
       <div className='product'>
         <div className='imageProduct'>
-          <div className='pimg' onClick={showToggle}>
+          <div className='pimg' >
           <Image src={previewImage} alt="p1" width="1000px" height="1000px" loading="eager" />
+          {/* this is only for desktop to show overlay with previw images */}
+          <div className='pimgLogic' onClick={showToggle}></div>
           </div>
 
           <div className='prev' onClick={prevImage}>

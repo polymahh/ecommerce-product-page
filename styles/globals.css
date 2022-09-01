@@ -153,7 +153,24 @@ a {
   cursor: pointer;
   background-color: var(--orange-hover);
 }
+
+.pimgLogic{
+  display: none;
+}
+
+
 @media (min-width:768px){
+  
+  .pimgLogic{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(137, 43, 226, 0);
+    z-index: 199;
+}
 
   .product{
     position: relative;

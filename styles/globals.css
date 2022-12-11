@@ -185,6 +185,7 @@ a {
     overflow: hidden;
     display: flex;
     cursor: pointer;
+    position: relative;
   }
   .preview{
     display: flex;
